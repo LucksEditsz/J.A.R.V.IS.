@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#02070b">
+    <title>J.A.R.V.I.S. SYSTEM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<main class="screen" id="screen">
+
+    <div class="background"></div>
+    <div class="scanlines"></div>
+
+    <!-- CABEÇALHO -->
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-mark">┘</span>
+            <div>
+                <strong>J.A.R.V.I.S.</strong>
+                <small>JUST A RATHER VERY INTELLIGENT SYSTEM</small>
+            </div>
+        </div>
+
+        <div class="online">
+            <i></i>
+            SYSTEM ONLINE
+        </div>
+
+        <button class="menu-button" id="menuButton"
+                aria-label="Abrir menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- MENU LATERAL -->
+    <nav class="menu" id="menu" aria-hidden="true">
+        <div class="menu-heading">
+            <span>MENU DO SISTEMA</span>
+            <button id="closeMenu" aria-label="Fechar menu">×</button>
+        </div>
+
+        <button class="menu-item" data-action="alarm"><span>◷</span>Alarme</button>
+        <button class="menu-item" data-action="notes"><span>▤</span>Bloco de Notas</button>
+        <button class="menu-item" data-action="calculator"><span>＋</span>Calculadora</button>
+        <button class="menu-item" data-action="calendar"><span>▣</span>Calendário</button>
+        <button class="menu-item" data-action="camera"><span>◉</span>Câmera</button>
+        <button class="menu-item" data-action="weather"><span>☁</span>Clima</button>
+        <button class="menu-item" data-action="stopwatch"><span>◌</span>Cronômetro</button>
+        <button class="menu-item" data-action="dictionary"><span>📖</span>Dicionário</button>
+        <button class="menu-item" data-action="messages"><span>✉</span>Ler Mensagens</button>
+        <button class="menu-item" data-action="call"><span>☎</span>Ligações</button>
+        <button class="menu-item" data-action="water"><span>💧</span>Monitor de Ingestão de Água</button>
+        <button class="menu-item" data-action="music"><span>♫</span>Pausar e/ou Trocar de Música</button>
+        <button class="menu-item" data-action="stats"><span>▥</span>Probabilidade e Estatísticas</button>
+        <button class="menu-item" data-action="sports"><span>⚽</span>Tabelas Esportivas</button>
+        <button class="menu-item" data-action="gps"><span>📍</span>GPS / Localização</button>
+
+        <div class="menu-foot">J.A.R.V.I.S. // INTERFACE HUD</div>
+    </nav>
+
+    <div class="scrim" id="scrim"></div>
+
+    <!-- PAINÉIS -->
+    <section class="dashboard">
+
+        <!-- PAINEL ESQUERDO -->
+        <aside class="panel left-panel">
+            <div class="panel-heading">
+                <h3>SYSTEM MAP</h3>
+                <span>SYS-01</span>
+            </div>
+
+            <div class="globe-area">
+                <img src="jarvis_globo_neon.png"
+                     class="earth-image"
+                     alt="Terra holográfica">
+            </div>
+
+            <div class="loading-block">
+                <div class="loading-label">
+                    <span>GLOBAL SYSTEM</span>
+                    <span id="loadingPercent">78%</span>
+                </div>
+
+                <div class="loading-bars">
+                    <span></span><span></span><span></span>
+                </div>
+
+                <div class="loading-status">
+                    SCANNING PLANETARY DATA...
+                </div>
+            </div>
+
+            <div class="data-box compact">
+                <div class="data-label">PLANET</div>
+                <div class="data-value">EARTH</div>
+            </div>
+
+            <div class="data-box compact">
+                <div class="data-label">SYSTEM STATUS</div>
+                <div class="data-value online-text">ACTIVATED</div>
+            </div>
+        </aside>
+
+        <!-- PAINEL CENTRAL -->
+        <section class="panel center-panel">
+            <div class="center-header">
+                <span>ARTIFICIAL INTELLIGENCE</span>
+                <span>CORE-02</span>
+            </div>
+
+            <div class="jarvis-core">
+                <div class="core-circle">
+                    <div class="core-inner">J</div>
+                </div>
+                <div class="core-lines"></div>
+            </div>
+
+            <div class="jarvis-name">J.A.R.V.I.S.</div>
+            <div class="jarvis-subtitle">
+                JUST A RATHER VERY INTELLIGENT SYSTEM
+            </div>
+
+            <div class="chat" id="chat">
+                <div class="message jarvis-message">
+                    <span>J.A.R.V.I.S.</span>
+                    <p>Bom dia, senhor. Como posso ajudá-lo?</p>
+                </div>
+            </div>
+
+            <div class="command-area">
+                <button class="mic-button" id="micButton"
+                        aria-label="Ativar microfone">🎙</button>
+
+                <input id="userInput" type="text"
+                       autocomplete="off"
+                       placeholder="Digite um comando para J.A.R.V.I.S...">
+
+                <button class="send-button" id="sendButton"
+                        aria-label="Enviar">➤</button>
+            </div>
+
+            <div class="voice-status" id="voiceStatus">
+                VOICE ONLINE • READY
+            </div>
+        </section>
+
+        <!-- PAINEL DIREITO -->
+        <aside class="panel right-panel">
+            <div class="panel-heading">
+                <h3>USER DATA</h3>
+                <span>SYS-03</span>
+            </div>
+
+            <div class="profile-data">
+                <div class="info-row">
+                    <span>MEU NOME</span>
+                    <strong>LUCAS EDUARDO FREITAS DA SILVA</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>DATA DE NASCIMENTO</span>
+                    <strong>14/01/2013</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>IDADE</span>
+                    <strong id="ageDisplay">--</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>HORÁRIO LOCAL</span>
+                    <strong id="clock">--:--:--</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>DATA LOCAL</span>
+                    <strong id="date">--/--/----</strong>
+                </div>
+            </div>
+
+            <div class="right-divider"></div>
+
+            <!-- MENSAGENS RECENTES -->
+            <button class="recent-messages-button"
+                    id="recentMessagesButton"
+                    type="button">
+                <span class="recent-icon">✉</span>
+                <div>
+                    <div class="data-label">INSTAGRAM</div>
+                    <div class="data-value">MENSAGENS RECENTES</div>
+                </div>
+            </button>
+        </aside>
+    </section>
+
+    <div class="hud-hint">
+        <span class="pulse"></span>
+        INTERFACE PRONTA
+        <span>/</span>
+        ☰ MENU DE FUNÇÕES
+    </div>
+
+    <section class="toast" id="toast" role="status"></section>
+
+    <!-- MODAL DAS FERRAMENTAS -->
+    <section class="modal" id="modal" aria-hidden="true">
+        <div class="modal-card">
+            <div class="modal-heading">
+                <h2 id="modalTitle">J.A.R.V.I.S.</h2>
+                <button id="modalClose" aria-label="Fechar">×</button>
+            </div>
+            <div id="modalBody"></div>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

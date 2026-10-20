@@ -1,0 +1,14 @@
+J.A.R.V.I.S. COMPLETO — WINDOWS
+
+Inclui:
+- Menu de três traços com GPS, jogos, música, tabelas esportivas e outras funções.
+- 6 jogos Windows: GTA San Andreas, F1 2016, PES 6, GTA Vice City, PES 2018 e FIFA 15.
+- Voz e reconhecimento de voz.
+- Terra holográfica.
+- Horário/data local.
+- Pasta musicas preparada para até 25 faixas.
+
+Para abrir os jogos, use a versão Windows do projeto e entre em:
+☰ > JOGOS > INICIAR.
+
+Este ZIP é o projeto, não um instalador .EXE.

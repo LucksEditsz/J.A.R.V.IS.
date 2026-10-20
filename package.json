@@ -1,0 +1,42 @@
+{
+  "name": "jarvis-hud-games",
+  "version": "1.0.0",
+  "description": "J.A.R.V.I.S. HUD com jogos Windows integrados",
+  "main": "main.js",
+  "author": "LucksEdits",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "com.jarvis.assistente.games",
+    "productName": "J.A.R.V.I.S.",
+    "files": [
+      "index.html",
+      "style.css",
+      "script.js",
+      "main.js",
+      "preload.js",
+      "jarvis_globo_neon.png",
+      "fundo-jarvis.png",
+      "musica-entrada.mp3",
+      "musica-2.mp3",
+      "games/**/*"
+    ],
+    "directories": { "output": "dist" },
+    "win": {
+      "target": ["nsis"]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
